@@ -14,7 +14,7 @@ class ChatScreen extends StatelessWidget {
           padding: EdgeInsets.all(8.0),
           child: CircleAvatar(
             backgroundImage: NetworkImage(
-                'https://s3p.sofifa.net/ee513cc8aa0e133cdc8cbeb11aaa42136b2d8ffe.jpg'),
+              'https://s3p.sofifa.net/ee513cc8aa0e133cdc8cbeb11aaa42136b2d8ffe.jpg'),
           ),
         ),
         title: const Text('Chat'),
@@ -33,15 +33,16 @@ class _ChatView extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(
           children: [
-            Expanded(child: ListView.builder(
-              itemCount: 100,
-              itemBuilder: (context, index) {
-                return (index % 2 == 0)
-                  ? const HerMessageBubble() 
-                  : const MyMessageBubble();
-              })),
+            Expanded(
+              child: ListView.builder(
+                itemCount: 100,
+                itemBuilder: (context, index) {
+                  return (index % 2 == 0)
+                    ? const HerMessageBubble()
+                    : const MyMessageBubble();
+                })),
             // Caja de texto de mensajes
-            MessageFieldBox(),
+            const MessageFieldBox(),
           ],
         ),
       ),
